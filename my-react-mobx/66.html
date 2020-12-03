@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let arr = [1, 1, 1, 2, 2, 2, 3, 3, 3]
+        // function removeRepeat(arr) {
+        //     return arr.filter((item, index) => {
+        //         console.log(arr.indexOf(item), index);
+
+        //         return arr.indexOf(item) === index
+        //     })
+        // }
+
+        // function removeRepeat(arr) {
+        //     let newArr = []
+        //     arr.forEach(item => {
+        //         if (newArr.indexOf(item) === -1) {
+        //             newArr.push(item)
+        //         }
+        //     })
+        //     return newArr
+        // }
+        // console.log(removeRepeat(arr));
+
+        for (var i = 0; i < 10; i++) {
+            setTimeout(() => {
+                // console.log(i);
+            }, 1000)
+            // 10个10
+        }
+
+        // 1
+        for (let i = 0; i < 10; i++) {
+            setTimeout(() => {
+                // console.log(i);
+            }, 1000)
+            // 0-9
+        }
+
+        // 2
+        // let value = {}
+        // for (let i = 0; i < 10; i++) {
+        //     value[i] = i
+        //     setTimeout(() => {
+        //         // console.log(value[i]);
+        //     }, 1000)
+        //     // 0-9
+        // }
+
+        // 3
+        let value = []
+        for (let i = 0; i < 10; i++) {
+            value.push(i)
+            setTimeout(() => {
+                // console.log(value[i]);
+            }, 1000)
+            // 0-9
+        }
+
+        // 5,2341
+        // 事件轮询
+        setTimeout(function () {
+            console.log(1);
+        }, 0)
+
+        new Promise(function executor(resolve) {
+            console.log(2);
+            for (var i = 0; i < 1000; i++) {
+                i = 9999 && resolve();
+            }
+            console.log(3);
+        }).then(function () {
+            console.log(4);
+        })
+        console.log(5);
+    </script>
+</body>
+
+</html>
